@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="Texto personalizado en StatusBar">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Texto personalizado" android:key="CustomTxt_toggle" android:defaultValue="true" android:summaryOn="@string/summaryOn" android:summaryOff="@string/summaryOff" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Cambiar color texto personalizado" android:key="CustomTxt_color" android:summary="Elige el color" android:dependency="CustomTxt_toggle" android:defaultValue="-13542266" />
+        <com.wubydax.romcontrol.v2.prefs.MyEditTextPreference android:title="Cambiar el texto" android:key="CustomTxt_text" android:summary="Elige texto" android:dependency="CustomTxt_toggle" android:defaultValue="NoNaMeROM" android:dialogTitle="Editar texto" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Indicador Velocidad de datos">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Habilitar flujo de datos" android:key="tweaks_speed_view" android:summaryOn="Mostrar" android:summaryOff="Ocultar" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Configurar velocidad de flujo de datos">
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Color velocidad Download" android:key="tweaks_speed_color_download" android:summary="Elige color de velocidad descarga" android:defaultValue="\#ffffffff"  />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Color velocidad Upload" android:key="tweaks_speed_color_upload" android:summary="Elige color de velocidad subida" android:defaultValue="\#ffffffff" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Mods de StatusBar" />
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:summary="Elije entre mas de 1000 estilos diferentes de baterías" app:componentName="com.three.minit.minitbatterysettings.free/com.three.minit.minitbatterysettings.MainActivity" />
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:summary="Perosonaliza el reloj del StatusBar" app:componentName="three.minit.clock/three.minit.clock.ClockSettings" />
+    <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:summary="StatusBar Color Mod" app:componentName="com.potato.gradientapp/com.potato.gradientapp.MainActivity" />
+</PreferenceScreen>
