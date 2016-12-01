@@ -6,6 +6,10 @@
           <option name="url" value="https://github.com/sanoc69/NNRom-Control" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="http://github.com/" />
+          <option name="userName" value="luis.alvarinho@gmail.com" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="C:\Users\miguel\.AndroidStudio2.2" />
