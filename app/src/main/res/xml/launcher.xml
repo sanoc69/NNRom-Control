@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="Gesto en cualquier lugar de la pantalla">
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/tw_effect_entries" android:title="Efectos Launcher" android:key="tw_page_effect" android:defaultValue="1" android:entryValues="@array/tw_effect_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Menu Reinicio">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Botón Recovery" android:key="reboot_recovery" android:defaultValue="false" android:summaryOn="Mostrar" android:summaryOff="Ocultar" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Botón Modo Emergencia" android:key="power_emergency" android:defaultValue="true" android:summaryOn="Mostrar" android:summaryOff="Ocultar" />
+    </PreferenceCategory>
 </PreferenceScreen>

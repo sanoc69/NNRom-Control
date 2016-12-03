@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="Panel de notificaciones">
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Color Notificaciones" android:key="notification_background_color" android:summary="Eligir Color" android:defaultValue="-1" hexValue="true" alphaSlider="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

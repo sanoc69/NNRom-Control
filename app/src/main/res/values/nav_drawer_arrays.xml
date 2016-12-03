@@ -24,7 +24,13 @@
 
     MAKE SURE THE ITEMS IN ALL 3 ARRAYS CORRESPOND IN ORDER AND ALL 3 ARRAYS ARE SAME LENGTH-->
     <array name="nav_menu_prefs_drawables">
+        <item>@drawable/ic_custom_backgrounds</item>
+        <item>@drawable/ic_framework</item>
+        <item>@drawable/ic_lockscreen</item>
+        <item>@drawable/ic_notification_panel</item>
+        <item>@drawable/ic_phone</item>
         <item>@drawable/ic_system_ui</item>
+        <item>@drawable/ic_useful_apps</item>
     </array>
 
 
@@ -32,7 +38,13 @@
     Use @string reference, so later on your app can be translated with ease
     KEEP THE ORDER BETWEEN ALL YOUR ARRAYS-->
     <string-array name="nav_menu_prefs_titles">
+        <item>@string/custom_backgrounds_prefs</item>
+        <item>@string/framework_prefs</item>
+        <item>@string/lockscreen_prefs</item>
+        <item>@string/notification_panel_prefs</item>
+        <item>@string/phone_prefs</item>
         <item>@string/systemui_prefs</item>
+        <item>@string/useful_apps_prefs</item>
     </string-array>
 
 
@@ -41,6 +53,12 @@
     Here you put the file names of the preference files you create in your xml directory
     THEY MUST BE PRECISE AND CASE SENSITIVE!!! DO NOT ADD .xml SUFFIX-->
     <string-array name="nav_menu_xml_file_names" translatable="false">
+        <item>custom_backgrounds_prefs</item>
+        <item>launcher</item>
+        <item>lockscreen_prefs</item>
+        <item>notification_panel_prefs</item>
+        <item>phone_prefs</item>
         <item>systemui</item>
+        <item>useful_apps_prefs</item>
     </string-array>
 </resources>
