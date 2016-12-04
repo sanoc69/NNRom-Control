@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="HERRAMIENTAS ROM">
+        <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:summary="Elija entre más de 1000 estilos de batería" app:componentName="com.three.minit.minitbatterysettings.free/com.three.minit.minitbatterysettings.MainActivity" />
+        <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:summary="Beats Audio" app:componentName="com.zloban.beatsfx/com.zloban.beatsfx.beatsAudioControlPanelActivity" />
+        <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:summary="Adaway" app:componentName="org.adaway/org.adaway.ui.BaseActivity" />
+        <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:summary="Control de toolbox samsung, activar o desactivar, seleccionar aplicaciones disponibles y organizarlos" app:componentName="com.wubydax.toolboxsettings/com.wubydax.toolboxsettings.ToolboxSettings" />
+        <PreferenceScreen android:icon="@drawable/viper" android:title="Viper4Android" android:summary="">
+            <intent android:targetPackage="com.audlabs.viperfx" android:action="android.intent.category.DEFAULT" android:targetClass="com.audlabs.viperfx.main.MainActivity" />
+        </PreferenceScreen>
+        <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:summary="Habilitar y controlar Dolby Audio" app:componentName="com.atmos.daxappUI/com.atmos.daxappUI.MainActivity" />
+        <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:title=" SuperSu App de Chainfire's" android:summary="Gestionar permisos de root para aplicaciones y servicios" app:componentName="eu.chainfire.supersu/eu.chainfire.supersu.MainActivity-Material" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="APOYA EL DESARROLLO DE LA ROM">
+        <PreferenceScreen android:icon="@drawable/foro" android:title="FORO" android:summary="Acceso y registro al Foro Privado NoNaMeROM">
+            <intent android:action="android.intent.action.VIEW" android:data="http://www.nonamerom.es/" />
+        </PreferenceScreen>
+        <PreferenceScreen android:icon="@drawable/foro" android:title="Apoyar el desarrollo de la ROM" android:summary="PULSE AQUI PARA HACER UNA DONACIÓN">
+            <intent android:action="android.intent.action.VIEW" android:data="https://goo.gl/di3cCy" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

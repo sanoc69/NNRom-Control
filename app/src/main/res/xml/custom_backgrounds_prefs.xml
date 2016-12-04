@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="Fondo de panel de notificación" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Activar fondo personalizado" android:key="enable_gear_custom_bg" android:defaultValue="false" android:summaryOn="Habilitado" android:summaryOff="Deshabilitado" />
+    <PreferenceCategory android:title="Imagen de Cortina" android:dependency="enable_gear_custom_bg">
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/custom_bg_type_entries" android:title="Background type" android:key="gear_custom_bg_type" android:defaultValue="0" android:entryValues="@array/custom_bg_type_values" app:dependentValue="0" />
+        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="Opacidad de la imagen" android:key="gear_bg_opacity" android:defaultValue="255" app:minValue="0" app:maxValue="255" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Configuración de imagen personalizada" android:dependency="enable_gear_custom_bg">
+        <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference android:title="Selecciona la imagen" android:key="gear_bg_image_uri" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/crop_entries" android:title="Set Image Scaling Type" android:key="gear_bg_crop_type" android:defaultValue="0" android:entryValues="@array/crop_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Color y degradado" android:dependency="enable_gear_custom_bg">
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Selecciona el color primario" android:key="gear_bg_primary_color" android:dependency="gear_custom_bg_type" android:defaultValue="\#00000000" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Segundo color (para el degradado)" android:key="gear_second_gradient_color" android:dependency="gear_custom_bg_type" android:defaultValue="\#00000000" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/gradient_entries" android:title="Orientación del Degradado" android:key="gear_bg_gradient_orientation" android:dependency="gear_custom_bg_type" android:defaultValue="0" android:entryValues="@array/gradient_values" />
+    </PreferenceCategory>
+</PreferenceScreen>

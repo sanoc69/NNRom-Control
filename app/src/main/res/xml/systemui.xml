@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="Batería Bar" android:summary="Display Line on top for battery">
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/battery_bar_entries" android:title="Batería Bar" android:key="battery_bar" android:summary="%s" android:defaultValue="1" android:entryValues="@array/battery_bar_values" />
+        <SwitchPreference android:title="Batería bar animación" android:key="battery_bar_animate" android:defaultValue="true" android:summaryOn="Animación Habilitado" android:summaryOff="Animación dishabilitado" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/battery_bar_style_entries" android:title="Estilo de barra de batería" android:key="battery_bar_style" android:summary="%s" android:defaultValue="1" android:entryValues="@array/battery_bar_style_values" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/battery_bar_thickness_entries" android:title="Espesor de la barra de la batería" android:key="battery_bar_thickness" android:summary="%s" android:defaultValue="2" android:entryValues="@array/battery_bar_thickness_values" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Color de la batería" android:key="battery_bar_color" android:summary="Choose color of battery bar" android:defaultValue="-1" hexValue="true" alphaSlider="true" />
+    </PreferenceCategory>
     <PreferenceCategory android:title="Texto personalizado en StatusBar">
         <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Texto personalizado" android:key="CustomTxt_toggle" android:defaultValue="true" android:summaryOn="@string/summaryOn" android:summaryOff="@string/summaryOff" />
-        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Cambiar color texto personalizado" android:key="CustomTxt_color" android:summary="Elige el color" android:dependency="CustomTxt_toggle" android:defaultValue="-13542266" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Cambiar color texto personalizado" android:key="CustomTxt_color" android:summary="Elige el color" android:dependency="CustomTxt_toggle" android:defaultValue="-13542266" alphaSlider="true" hexValue="true" />
         <com.wubydax.romcontrol.v2.prefs.MyEditTextPreference android:title="Cambiar el texto" android:key="CustomTxt_text" android:summary="Elige texto" android:dependency="CustomTxt_toggle" android:defaultValue="NoNaMeROM" android:dialogTitle="Editar texto" />
     </PreferenceCategory>
     <PreferenceCategory android:title="Indicador Velocidad de datos">
         <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Habilitar flujo de datos" android:key="tweaks_speed_view" android:summaryOn="Mostrar" android:summaryOff="Ocultar" />
     </PreferenceCategory>
     <PreferenceCategory android:title="Configurar velocidad de flujo de datos">
-        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Color velocidad Download" android:key="tweaks_speed_color_download" android:summary="Elige color de velocidad descarga" android:defaultValue="\#ffffffff"  />
-        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Color velocidad Upload" android:key="tweaks_speed_color_upload" android:summary="Elige color de velocidad subida" android:defaultValue="\#ffffffff" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Color velocidad Download" android:key="tweaks_speed_color_download" android:summary="Elige color de velocidad descarga" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Color velocidad Upload" android:key="tweaks_speed_color_upload" android:summary="Elige color de velocidad subida" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true" />
     </PreferenceCategory>
     <PreferenceCategory android:title="Mods de StatusBar" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Separate or Global colors" android:key="is_global_sb_color" android:defaultValue="true" android:summaryOn="Seperate colors" android:summaryOff="Global colors" app:packageNameToKill="com.android.systemui" app:isSilent="false"/>
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Global color" android:key="global_sb_color" android:defaultValue="#ffffff" />
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Battery Percent Color" android:defaultValue="#ffffff" android:key="battery_percent_color" android:dependency="is_global_sb_color" app:packageNameToKill="com.android.systemui" app:isSilent="false"/>
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Clock Color" android:defaultValue="#ffffff" android:key="gear_clock_color" android:dependency="is_global_sb_color" />
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Status Icons Color" android:defaultValue="#ffffff" android:key="status_icons_color" android:dependency="is_global_sb_color" />
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Notification Icons Color" android:defaultValue="#ffffff" android:key="notification_icons_color" android:dependency="is_global_sb_color" app:rebootDevice="true"/>
     <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:summary="Elije entre mas de 1000 estilos diferentes de baterías" app:componentName="com.three.minit.minitbatterysettings.free/com.three.minit.minitbatterysettings.MainActivity" />
     <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:summary="Perosonaliza el reloj del StatusBar" app:componentName="three.minit.clock/three.minit.clock.ClockSettings" />
     <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:summary="StatusBar Color Mod" app:componentName="com.potato.gradientapp/com.potato.gradientapp.MainActivity" />
