@@ -21,6 +21,12 @@
         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Color velocidad Upload" android:key="tweaks_speed_color_upload" android:summary="Elige color de velocidad subida" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true" />
     </PreferenceCategory>
     <PreferenceCategory android:title="Mods de StatusBar" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Separate or Global colors" android:key="is_global_sb_color" android:defaultValue="true" android:summaryOn="Seperate colors" android:summaryOff="Global colors" app:packageNameToKill="com.android.systemui" app:isSilent="false"/>
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Global color" android:key="global_sb_color" android:defaultValue="#ffffff" />
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Battery Percent Color" android:defaultValue="#ffffff" android:key="battery_percent_color" android:dependency="is_global_sb_color" app:packageNameToKill="com.android.systemui" app:isSilent="false"/>
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Clock Color" android:defaultValue="#ffffff" android:key="gear_clock_color" android:dependency="is_global_sb_color" />
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Status Icons Color" android:defaultValue="#ffffff" android:key="status_icons_color" android:dependency="is_global_sb_color" />
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Notification Icons Color" android:defaultValue="#ffffff" android:key="notification_icons_color" android:dependency="is_global_sb_color" app:rebootDevice="true"/>
     <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:summary="Elije entre mas de 1000 estilos diferentes de baterías" app:componentName="com.three.minit.minitbatterysettings.free/com.three.minit.minitbatterysettings.MainActivity" />
     <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:summary="Perosonaliza el reloj del StatusBar" app:componentName="three.minit.clock/three.minit.clock.ClockSettings" />
     <com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:summary="StatusBar Color Mod" app:componentName="com.potato.gradientapp/com.potato.gradientapp.MainActivity" />
